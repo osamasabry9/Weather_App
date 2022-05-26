@@ -48,7 +48,7 @@ class HomeScreen extends GetView<HomeController> {
                     ),
                     //TODO
                     Container(
-                      padding: EdgeInsets.only(top: 100, left: 20, right: 20),
+                      padding: EdgeInsets.only(top: 80, left: 20, right: 20),
                       child: TextField(
                         onChanged: (value) => controller.city = value,
                         style: TextStyle(
@@ -79,7 +79,7 @@ class HomeScreen extends GetView<HomeController> {
                       ),
                     ),
                     Align(
-                      alignment: Alignment(0.0, 1.0),
+                      alignment: Alignment(0.0, 1.4),
                       child: SizedBox(
                         height: 10,
                         width: 10,
@@ -87,7 +87,7 @@ class HomeScreen extends GetView<HomeController> {
                           minWidth: 0.0,
                           maxWidth: MediaQuery.of(context).size.width,
                           minHeight: 0.0,
-                          maxHeight: (MediaQuery.of(context).size.height / 4),
+                          maxHeight: (MediaQuery.of(context).size.height / 3),
                           child: Stack(
                             children: <Widget>[
                               Container(
@@ -170,7 +170,7 @@ class HomeScreen extends GetView<HomeController> {
                                                             'flutterfonts',
                                                       ),
                                                 ),
-                                                SizedBox(height: 10),
+                                                SizedBox(height: 5),
                                                 Text(
                                                   '${(controller.currentWeatherData.main!.temp! - 273.15).round().toString()}\u2103',
                                                   style: Theme.of(context)
@@ -205,8 +205,8 @@ class HomeScreen extends GetView<HomeController> {
                                                   MainAxisAlignment.center,
                                               children: <Widget>[
                                                 SizedBox(
-                                                  width: 120,
-                                                  height: 120,
+                                                  width: 100,
+                                                  height: 100,
                                                   child: LottieBuilder.asset(
                                                       Images.cloudyAnim),
                                                 ),
@@ -244,6 +244,7 @@ class HomeScreen extends GetView<HomeController> {
                 ),
               ),
             ),
+            SizedBox(height: 50,),
             Expanded(
               flex: 2,
               child: Stack(

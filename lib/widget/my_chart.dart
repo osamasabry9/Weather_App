@@ -11,7 +11,7 @@ class MyChart extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 240,
+      height: 120,
       child: Card(
         elevation: 5,
         shape: RoundedRectangleBorder(
